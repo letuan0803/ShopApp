@@ -35,14 +35,14 @@ spec:
         image: anhtuan98a2/shopapp-spring:1.0.0.0
         ports:
         - containerPort: 8088
-        livenessProbe:
-          httpGet:
-            path: /api/v1/actuator/health
-            port: 8088
-          failureThreshold: 3
-          periodSeconds: 30
-          initialDelaySeconds : 20
-          timeoutSeconds : 10
+        # livenessProbe:
+        #   httpGet:
+        #     path: /api/v1/actuator/health
+        #     port: 8088
+        #   failureThreshold: 3
+        #   periodSeconds: 30
+        #   initialDelaySeconds : 20
+        #   timeoutSeconds : 10
 ---
 apiVersion: apps/v1
 kind: Deployment
