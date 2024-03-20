@@ -10,10 +10,10 @@ client --> angular(30001:80) --> backend (30000:8080) --> redis (redis-service:6
 
 deployment + svc:
 
-- angular + nodePort
-- backend + clusterIP
-- redis + clusterIP
-- mysql + clusterIP
+- angular + nodePort (call từ client)
+- backend + nodePort (call từ client)
+- redis + clusterIP (call internal backend)
+- mysql + nodePort (call từ client)
 
 configmap: không cần configmap
 
@@ -27,4 +27,4 @@ pv:
 
 ingress:
 
-- có thẻ chưa cần nếu expose cả api
+- tạm thời chưa cần
