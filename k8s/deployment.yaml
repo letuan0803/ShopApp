@@ -5,7 +5,7 @@ metadata:
   labels:
     app: spring
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: spring
@@ -21,15 +21,15 @@ spec:
             memory: "32Mi"
             cpu: "100m"
           limits:
-            memory: "128Mi"
+            memory: "500Mi"
             cpu: "500m"
         env:
         - name: SPRING_DATASOURCE_URL
-          value: "jdbc:mysql://mysql8-container:3306/ShopApp?serverTimezone=UTC&allowPublicKeyRetrieval=true"
+          value: "jdbc:mysql://mysql8-service:3306/ShopApp?serverTimezone=UTC&allowPublicKeyRetrieval=true"
         - name: MYSQL_ROOT_PASSWORD
           value: "Abc123456789@"
         - name: REDIS_HOST
-          value: "redis-container"
+          value: "redis-service"
         - name: REDIS_PORT
           value: "6379"
         image: anhtuan98a2/shopapp-spring:1.0.0.0
@@ -38,7 +38,7 @@ spec:
         livenessProbe:
           httpGet:
             path: /api/v1/actuator/health
-            port: 8080
+            port: 8088
           failureThreshold: 3
           periodSeconds: 30
           initialDelaySeconds : 20
@@ -51,7 +51,7 @@ metadata:
   labels:
     app: angular
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: angular
@@ -67,9 +67,9 @@ spec:
             memory: "32Mi"
             cpu: "100m"
           limits:
-            memory: "128Mi"
+            memory: "500Mi"
             cpu: "500m"
-        image: anhtuan98a2/shopapp-angular:1.0.0.0
+        image: anhtuan98a2/shopapp-angular:1.0.0.2
         ports:
         - containerPort: 80
         livenessProbe:
@@ -87,7 +87,7 @@ metadata:
   labels:
     app: redis
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: redis
@@ -103,7 +103,7 @@ spec:
             memory: "32Mi"
             cpu: "100m"
           limits:
-            memory: "128Mi"
+            memory: "500Mi"
             cpu: "500m"
         image: docker.io/redis:7.2.3
         ports:
@@ -116,7 +116,7 @@ metadata:
   labels:
     app: mysql8
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: mysql8
@@ -132,7 +132,7 @@ spec:
             memory: "32Mi"
             cpu: "100m"
           limits:
-            memory: "128Mi"
+            memory: "500Mi"
             cpu: "500m"
         image: mysql:8.2.0
         ports:
@@ -197,6 +197,7 @@ kind: Service
 metadata:
   name: mysql8-service
 spec:
+  type: NodePort
   selector:
     app: mysql8
   ports:
@@ -204,3 +205,4 @@ spec:
       # By default and for convenience, the `targetPort` is set to
       # the same value as the `port` field.
       targetPort: 3306
+      nodePort: 30002

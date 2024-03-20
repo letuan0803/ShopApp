@@ -2,9 +2,11 @@
 
 ## docker
 
-client --> angular(4301) --> backend (8099) --> redis (6379) --> mysql (3307)
+client --> angular(4301:80) --> backend (8099:8088) --> redis (6379:6379) --> mysql (3307:3306)
 
 ## k8s
+
+client --> angular(30001:80) --> backend (30000:8080) --> redis (redis-service:6379) --> mysql (30002:3306)
 
 deployment + svc:
 
