@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" modified="2024-03-22T15:54:30.662Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="Yvub_vykKGvUKWL68JEG" version="23.1.5" type="device">
+  <diagram name="Page-1" id="RLKj4G_WWUMheItuyyGp">
+    <mxGraphModel dx="819" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-3" value="local" style="rounded=0;whiteSpace=wrap;html=1;align=right;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="750" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-1" value="k8s cluster" style="rounded=0;whiteSpace=wrap;html=1;align=right;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="600" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-9" value="redis-service:6379&amp;nbsp; &amp;nbsp; - " style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wNvRsw-GnLNUq_YJxVJp-2" target="wNvRsw-GnLNUq_YJxVJp-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="wNvRsw-GnLNUq_YJxVJp-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="300" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-25" value="mysql8-service:3306" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wNvRsw-GnLNUq_YJxVJp-2" target="wNvRsw-GnLNUq_YJxVJp-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-2" value="backend" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-4" value="frontend" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-5" value="redis" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-6" value="mysql" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-8" value="localhost:30001" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="wNvRsw-GnLNUq_YJxVJp-7" target="wNvRsw-GnLNUq_YJxVJp-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-12" value="localhost: 30000" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wNvRsw-GnLNUq_YJxVJp-7" target="wNvRsw-GnLNUq_YJxVJp-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="460" />
+              <mxPoint x="70" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-7" value="User (broser)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="225" y="430" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="wNvRsw-GnLNUq_YJxVJp-13" target="wNvRsw-GnLNUq_YJxVJp-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="wNvRsw-GnLNUq_YJxVJp-13" target="wNvRsw-GnLNUq_YJxVJp-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="565" y="450" />
+              <mxPoint x="565" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-13" value="Develop" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="420" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-16" value="&lt;h1&gt;Mô hình triển khai&lt;/h1&gt;&lt;p&gt;- 4 triển khai cho FE, BE, redis, mysql.&lt;/p&gt;&lt;p&gt;- 2 kết nối ngoài cụm vào FE, BE&lt;/p&gt;&lt;p&gt;- 2 kết nối trong cụm vào redis, mysql&lt;/p&gt;&lt;p&gt;- có thể có 2 kết nối vào redis, mysql để develop cấu hình&lt;/p&gt;&lt;p&gt;- cách thức để backup, lưu trữ dữ liệu vĩnh viễn cho mysql&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="210" width="190" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-17" value="storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="630" y="410" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=15;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="wNvRsw-GnLNUq_YJxVJp-6" target="wNvRsw-GnLNUq_YJxVJp-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-21" value="&lt;h1&gt;Mô hình triển khai - detail&lt;/h1&gt;&lt;p&gt;- 4 deployment&lt;br&gt;&lt;/p&gt;&lt;p&gt;- 2 service NodePort (dùng được cả nội bộ)&amp;nbsp;&lt;/p&gt;&lt;p&gt;- 2 service ClusterIP&lt;/p&gt;&lt;p&gt;- pv,pvc,sc&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="210" width="190" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="wNvRsw-GnLNUq_YJxVJp-27" value="&lt;h1&gt;Note&lt;/h1&gt;&lt;p&gt;- service ClusterIP:&lt;/p&gt;&lt;p&gt;+ chỉ call được nội bộ trong cụm (đừng từ 1 pod trong cụm)&lt;/p&gt;&lt;p&gt;+ cách thức: service_name:port&lt;/p&gt;&lt;p&gt;- service NodePort:&lt;/p&gt;&lt;p&gt;+ call được cả nội bộ và ngoài cụm&lt;/p&gt;&lt;p&gt;+ call nội bộ, tương tự như ClusterIP&lt;/p&gt;&lt;p&gt;+ call ngoài cụm: ip_wk:port&lt;/p&gt;&lt;p&gt;+ port này mở trên tất cả các wk&lt;/p&gt;&lt;p&gt;+ call từ bên ngoài cụm&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;+ call 1 ip:port: không HA&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;+ domain trỏ vào 1 loạt ip và sẽ có healtcheck, nếu wk lỗi, thì domain k gọi vào wk lỗi (nginx, haproxy, f5, ...)&lt;br&gt;&lt;/p&gt;&lt;p&gt;- Tại sao service biết fw traffic vào pod nào?&lt;/p&gt;&lt;p&gt;Dựa vào sự mapping giữa thông tin selector (Của service) và label (Của pod)&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="210" width="350" height="430" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

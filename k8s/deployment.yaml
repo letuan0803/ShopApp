@@ -1,3 +1,4 @@
+# deployment spring
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -44,6 +45,7 @@ spec:
         #   initialDelaySeconds : 20
         #   timeoutSeconds : 10
 ---
+# deployment angular
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -80,6 +82,7 @@ spec:
           periodSeconds: 30
           timeoutSeconds : 10
 ---
+# deployment redis
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -109,6 +112,7 @@ spec:
         ports:
         - containerPort: 6379
 ---
+# deployment mysql8
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -143,6 +147,7 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: "Abc123456789@"
 ---
+# service kiểu NodePort cho spring
 apiVersion: v1
 kind: Service
 metadata:
@@ -179,6 +184,7 @@ spec:
       # will allocate a port from a range (default: 30000-32767)
       nodePort: 30001
 ---
+# service kiểu ClusterIP cho spring
 apiVersion: v1
 kind: Service
 metadata:
@@ -192,6 +198,7 @@ spec:
       # the same value as the `port` field.
       targetPort: 6379
 ---
+# service kiểu NodePort cho mysql - dành cho developer
 apiVersion: v1
 kind: Service
 metadata:
