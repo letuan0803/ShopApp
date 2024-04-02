@@ -30,6 +30,7 @@ ingress:
 - tạm thời chưa cần
 
 Mục tiêu
+
 1. Cách thức dựng 1 app (dạng sơ đồ)
     - Nắm được các thành phần của app
     - Mô hình triển khai, giao tiếp giữa các thành phần --> kiến trúc sản phẩm
@@ -45,4 +46,3 @@ MVC
 single page - angular, vue, react --> xu hướng, xử lý nhiều việc ở máy client
 trước đó, đẩy tất cả mọi thứ lên server
 microservice
-
