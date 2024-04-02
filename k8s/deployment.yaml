@@ -73,7 +73,7 @@ spec:
           limits:
             memory: "500Mi"
             cpu: "500m"
-        image: anhtuan98a2/shopapp-angular:1.0.0.2
+        image: anhtuan98a2/shopapp-angular:1.0.0.3
         ports:
         - containerPort: 80
         livenessProbe:
@@ -158,7 +158,6 @@ metadata:
   name: spring-service
   namespace: shopapp
 spec:
-  type: NodePort
   selector:
     app: spring
   ports:
@@ -166,10 +165,6 @@ spec:
       # By default and for convenience, the `targetPort` is set to
       # the same value as the `port` field.
       targetPort: 8088
-      # Optional field
-      # By default and for convenience, the Kubernetes control plane
-      # will allocate a port from a range (default: 30000-32767)
-      nodePort: 30000
 ---
 apiVersion: v1
 kind: Service
@@ -177,7 +172,6 @@ metadata:
   name: angular-service
   namespace: shopapp
 spec:
-  type: NodePort
   selector:
     app: angular
   ports:
@@ -185,10 +179,6 @@ spec:
       # By default and for convenience, the `targetPort` is set to
       # the same value as the `port` field.
       targetPort: 80
-      # Optional field
-      # By default and for convenience, the Kubernetes control plane
-      # will allocate a port from a range (default: 30000-32767)
-      nodePort: 30001
 ---
 # service kiểu ClusterIP cho spring
 apiVersion: v1

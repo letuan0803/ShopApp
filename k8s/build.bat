@@ -1,5 +1,5 @@
 cd ..
-set version=1.0.0.2
+set version=1.0.0.3
 
 docker build . -t anhtuan98a2/shopapp-angular:%version% -f DockerfileAngular
 docker push anhtuan98a2/shopapp-angular:%version%
