@@ -1,0 +1,26 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServer
+metadata:
+  name: cafe
+  namespace: shopapp
+spec:
+  host: "localhost"
+  ingressClassName: nginx
+  # listener:
+  #   http: http-8083
+  #   https: https-8443
+  gunzip: on
+  upstreams:
+  - name: spring-upstream
+    service: spring-service
+    port: 80
+  - name: angular-upstream
+    service: angular-service
+    port: 80
+  routes:
+  - path: /api/v1/
+    action:
+      pass: spring-upstream
+  - path: /
+    action:
+      pass: angular-upstream
