@@ -24,3 +24,12 @@ spec:
   - path: /
     action:
       pass: angular-upstream
+    errorPages:
+    - codes: [502, 503]
+      redirect:
+        code: 301
+        url: https://nginx.org
+    - codes: [404]
+      return:
+        code: 200
+        body: "Original resource not found, but success!"
