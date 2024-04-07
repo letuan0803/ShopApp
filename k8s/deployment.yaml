@@ -150,6 +150,13 @@ spec:
           value: "ShopApp"
         - name: MYSQL_ROOT_PASSWORD
           value: "Abc123456789@"
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
 ---
 # service kiểu NodePort cho spring
 apiVersion: v1
@@ -211,3 +218,17 @@ spec:
       # the same value as the `port` field.
       targetPort: 3306
       nodePort: 30002
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+  namespace: shopapp
+  labels:
+    app: wordpress
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
